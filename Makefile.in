@@ -43,6 +43,9 @@ canfestival: driver
 driver:
 	$(MAKE) -C drivers $@
 
+test: canfestival
+	$(MAKE) -C test
+
 install: canfestival driver
 	$(MAKE) -C drivers $@
 	$(MAKE) -C src $@
@@ -61,12 +64,14 @@ clean:
 	$(MAKE) -C drivers $@
 	$(MAKE) -C examples $@
 	$(MAKE) -C objdictgen $@
-	
+	$(MAKE) -C test $@
+
 mrproper: clean
 	$(MAKE) -C src $@
 	$(MAKE) -C drivers $@
 	$(MAKE) -C examples $@
 	$(MAKE) -C objdictgen $@
+	$(MAKE) -C test  $@
 
 directories: ${OUT_DIR}
 

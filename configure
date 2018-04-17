@@ -617,6 +617,7 @@ if [ "$SUB_ARCH_NAME" = "x86_64" -a "$CC" = "gcc" ]; then
 	# Only if we are on x86_64 and using gcc
 	# For shared library generation, it needs this
 	SUB_PROG_CFLAGS+=\ -fPIC
+	SUB_PROG_CFLAGS+=\ -DCF_TARGET=${SUB_TARGET}
 fi
 
 if [ "$SUB_ARCH_NAME" = "arm" -a "${CC:(-3)}" = "gcc" ]; then
@@ -874,6 +875,7 @@ MAKEFILES=Makefile.in\
 \ objdictgen/Makefile.in\
 \ examples/Makefile.in\
 \ objdictgen/canfestival_config.py.in\
+\ test/Makefile.in\
 \ drivers/commonDriver.in\
 
 # Drivers dependent Makefiles
