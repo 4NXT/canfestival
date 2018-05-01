@@ -3,9 +3,16 @@ image: Visual Studio 2017 Preview
 configuration:
 - Debug
 - Release
-platform: x86
+platform:
+- x86
+- x64
+shallow_clone: true
 before_build:
 - ps: >-
+    write-host Downloading nuget packages
+
+    nuget restore CanFestival-3.vc15.sln
+
     write-host installing gnosis util
 
     cd objdictgen
@@ -18,7 +25,7 @@ before_build:
 
     python setup.py install > $null
 
-    cd ../..
+    cd $env:APPVEYOR_BUILD_FOLDER
 
 
     write-host Downloading and unpacking drivers into ./download
@@ -36,13 +43,27 @@ before_build:
     foreach ($d in $drivers)
 
     {
-        $source = $d[0]
-        $destination = "$env:APPVEYOR_BUILD_FOLDER\"+$d[1]
-        Invoke-WebRequest $source -OutFile $destination
-        [System.IO.Compression.ZipFile]::ExtractToDirectory($destination, $destination.Replace(".zip",""))
+      $source = $d[0]
+      $destination = "$env:APPVEYOR_BUILD_FOLDER\"+$d[1]
+      Invoke-WebRequest $source -OutFile $destination
+      [System.IO.Compression.ZipFile]::ExtractToDirectory($destination, $destination.Replace(".zip",""))
     }
+
+    test/external/downloadHippomocks.ps1
 build:
   project: CanFestival-3.vc15.sln
   verbosity: minimal
-test: off
-deploy: off
+test_script:
+- ps: >-
+    if($env:PLATFORM -eq "x64")
+    {
+      cd $env:PLATFORM
+    }
+
+    cd $env:CONFIGURATION
+
+    & "./unitTests.exe" "--gtest_filter=-*HW*:*Test_Anagate*:*Test_Peak*" "--gtest_output=xml"
+
+    (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\test_detail.xml))
+on_failure:
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
