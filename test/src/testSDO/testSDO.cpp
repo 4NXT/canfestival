@@ -23,6 +23,7 @@ public:
 		setState(CO, Operational);
 		CO->canHandle = &dummy;
 		data = 0x12345678;
+		memset(strData, 0, sizeof(strData));
 		memcpy(strData, testString,strlen(testString));
 	}
 	virtual void TearDown()
