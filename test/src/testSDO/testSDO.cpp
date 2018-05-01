@@ -28,7 +28,7 @@ public:
 	}
 	virtual void TearDown()
 	{
-
+		resetSDO(CO);
 	}
 protected:
 	int data;
