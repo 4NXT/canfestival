@@ -22,8 +22,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 // Critical Section Autorelease
-#ifndef __autoreleasecs_h__
-#define __autoreleasecs_h__
+#ifndef CANFESTIVAL_autoreleasecs_H_INCLUDED
+#define CANFESTIVAL_autoreleasecs_H_INCLUDED
 
 class AutoReleaseCS
    {
@@ -38,4 +38,4 @@ class AutoReleaseCS
          }
       CRITICAL_SECTION& m_cs;
    };
- #endif // __autoreleasecs_h__
+ #endif // CANFESTIVAL_autoreleasecs_H_INCLUDED

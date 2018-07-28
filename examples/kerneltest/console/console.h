@@ -1,5 +1,5 @@
-#ifndef __canftest_console_h__
-#define __canftest_console_h__
+#ifndef CANFESTIVAL_canftest_console_H_INCLUDED
+#define CANFESTIVAL_canftest_console_H_INCLUDED
 
 #define DEVICE_NAME "canf_ktest"
 

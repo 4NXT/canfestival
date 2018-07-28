@@ -21,8 +21,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 
-#ifndef __def_h__
-#define __def_h__
+#ifndef CANFESTIVAL_def_H_INCLUDED
+#define CANFESTIVAL_def_H_INCLUDED
 
 #include <config.h>
 
@@ -178,5 +178,5 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define state10 0x0A
 #define state11 0x0B
 
-#endif /* __def_h__ */
+#endif /* CANFESTIVAL_def_H_INCLUDED */
 

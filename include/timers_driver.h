@@ -24,8 +24,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  @ingroup userapi
  */
 
-#ifndef __timer_driver_h__
-#define __timer_driver_h__
+#ifndef CANFESTIVAL_timer_driver_H_INCLUDED
+#define CANFESTIVAL_timer_driver_H_INCLUDED
 
 #include "timerscfg.h"
 #include "timer.h"

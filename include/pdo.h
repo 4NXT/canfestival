@@ -26,8 +26,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  @ingroup comobj
  */
  
-#ifndef __pdo_h__
-#define __pdo_h__
+#ifndef CANFESTIVAL_pdo_H_INCLUDED
+#define CANFESTIVAL_pdo_H_INCLUDED
 
 #include <applicfg.h>
 #include <def.h>

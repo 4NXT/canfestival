@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __can_driver_h__
-#define __can_driver_h__
+#ifndef CANFESTIVAL_can_driver_H_INCLUDED
+#define CANFESTIVAL_can_driver_H_INCLUDED
 
 struct struct_s_BOARD;
 

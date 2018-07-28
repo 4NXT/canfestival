@@ -22,8 +22,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 // DS 401 Digital IO handling according DS 401 V2.1 "Device Profile for Generic I/O Modules"
 
-#ifndef __DS_401_h__
-#define __DS_401_h__
+#ifndef CANFESTIVAL_DS_401_H_INCLUDED
+#define CANFESTIVAL_DS_401_H_INCLUDED
 
 // Includes for the Canfestival
 #include "canfestival.h"
@@ -39,4 +39,4 @@ unsigned char analog_input_handler(CO_Data* d, unsigned int *newInput, unsigned 
 
 unsigned char analog_output_handler(CO_Data* d, unsigned int *newOutput, unsigned char size);
 
-#endif //__DS_401_h__
+#endif //CANFESTIVAL_DS_401_H_INCLUDED

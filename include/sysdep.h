@@ -1,5 +1,5 @@
-#ifndef __sysdep_h__
-#define __sysdep_h__
+#ifndef CANFESTIVAL_sysdep_H_INCLUDED
+#define CANFESTIVAL_sysdep_H_INCLUDED
 
 #include "config.h"
 
@@ -23,5 +23,5 @@
 
 #endif
 
-#endif /* __sysdep_h__ */
+#endif /* CANFESTIVAL_sysdep_H_INCLUDED */
 

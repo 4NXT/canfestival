@@ -31,8 +31,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  @ingroup comobj
  */
  
-#ifndef __sdo_h__
-#define __sdo_h__
+#ifndef CANFESTIVAL_sdo_H_INCLUDED
+#define CANFESTIVAL_sdo_H_INCLUDED
 
 struct struct_s_transfer;
 

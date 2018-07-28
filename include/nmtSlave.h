@@ -25,8 +25,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  @ingroup networkmanagement
  */
  
-#ifndef __nmtSlave_h__
-#define __nmtSlave_h__
+#ifndef CANFESTIVAL_nmtSlave_H_INCLUDED
+#define CANFESTIVAL_nmtSlave_H_INCLUDED
 
 #include <applicfg.h>
 #include "data.h"
@@ -50,4 +50,4 @@ void proceedNMTstateChange (CO_Data* d, Message * m);
 UNS8 slaveSendBootUp (CO_Data* d);
 
 
-#endif /* __nmtSlave_h__ */
+#endif /* CANFESTIVAL_nmtSlave_H_INCLUDED */
