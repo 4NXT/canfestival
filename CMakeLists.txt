@@ -115,8 +115,8 @@ set(_canopen_sources
   ${CMAKE_CURRENT_SOURCE_DIR}/src/lifegrd.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/lss.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/sync.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/nmtSlave.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/symbols.c)
+  # ${CMAKE_CURRENT_SOURCE_DIR}/src/symbols.c # TODO: needed only with configure option USE_KERNEL_TIMER
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/nmtSlave.c)
 
 add_library(canopen ${_canopen_sources})
 target_include_directories(canopen PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include/)
