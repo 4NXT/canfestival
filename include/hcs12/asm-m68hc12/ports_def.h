@@ -36,8 +36,8 @@ I wonder if the value in INITRG must not be changed too
 at run time.
 */
 
-#ifndef __HCS12_PORTS__
-#define __HCS12_PORTS__
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_PORTS_DEF_H
+#define _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_PORTS_DEF_H
 
 #define  PORTA     0x0000        
 #define  PORTB     0x0001    

@@ -1,9 +1,9 @@
-#ifndef CANFESTIVAL_canftest_console_H_INCLUDED
-#define CANFESTIVAL_canftest_console_H_INCLUDED
+#ifndef _CANFESTIVAL_EXAMPLES_KERNELTEST_CONSOLE_CONSOLE_H
+#define _CANFESTIVAL_EXAMPLES_KERNELTEST_CONSOLE_CONSOLE_H
 
 #define DEVICE_NAME "canf_ktest"
 
 #define CMD_START	'1'
 #define CMD_STOP	'2'
 
-#endif // __canftest_console.h__
+#endif // _CANFESTIVAL_EXAMPLES_KERNELTEST_CONSOLE_CONSOLE_H

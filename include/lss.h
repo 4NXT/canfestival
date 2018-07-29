@@ -31,8 +31,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  @ingroup comobj
  */
 					 
-#ifndef CANFESTIVAL_LSS_H_INCLUDED
-#define CANFESTIVAL_LSS_H_INCLUDED
+#ifndef _CANFESTIVAL_INCLUDE_LSS_H
+#define _CANFESTIVAL_INCLUDE_LSS_H
 
 #define SLSS_ADRESS	0x7E4
 #define MLSS_ADRESS	0x7E5

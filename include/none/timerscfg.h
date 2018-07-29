@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef CANFESTIVAL_TIMERSCFG_H_INCLUDED
-#define CANFESTIVAL_TIMERSCFG_H_INCLUDED
+#ifndef _CANFESTIVAL_INCLUDE_NONE_TIMERSCFG_H
+#define _CANFESTIVAL_INCLUDE_NONE_TIMERSCFG_H
 
 /* Time unit : ns */
 /* Time resolution : 64bit (~585 years) */

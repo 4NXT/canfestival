@@ -36,8 +36,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  @ingroup userapi
  */
  
-#ifndef CANFESTIVAL_objacces_H_INCLUDED
-#define CANFESTIVAL_objacces_H_INCLUDED
+#ifndef _CANFESTIVAL_INCLUDE_OBJACCES_H
+#define _CANFESTIVAL_INCLUDE_OBJACCES_H
 
 #include <applicfg.h>
 
@@ -264,4 +264,4 @@ UNS32 RegisterSetODentryCallBack(CO_Data* d, UNS16 wIndex, UNS8 bSubindex, ODCal
 }
 #endif
 
-#endif /* CANFESTIVAL_objacces_H_INCLUDED */
+#endif // _CANFESTIVAL_INCLUDE_OBJACCES_H

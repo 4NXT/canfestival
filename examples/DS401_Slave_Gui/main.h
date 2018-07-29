@@ -1,5 +1,5 @@
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef _CANFESTIVAL_EXAMPLES_DS401_SLAVE_GUI_MAIN_H
+#define _CANFESTIVAL_EXAMPLES_DS401_SLAVE_GUI_MAIN_H
 
 #include <wx/tglbtn.h>
 #include <wx/slider.h>
@@ -119,4 +119,4 @@ void actu (void);
 void actu_output (void);
 
 
-#endif /*MAIN_H_ */
+#endif // _CANFESTIVAL_EXAMPLES_DS401_SLAVE_GUI_MAIN_H

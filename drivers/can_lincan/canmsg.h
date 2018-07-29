@@ -6,8 +6,8 @@
  * Version lincan-0.3  17 Jun 2004
  */
 
-#ifndef _CANMSG_T_H
-#define _CANMSG_T_H
+#ifndef _CANFESTIVAL_DRIVERS_CAN_LINCAN_CANMSG_H
+#define _CANFESTIVAL_DRIVERS_CAN_LINCAN_CANMSG_H
 
 #ifdef __KERNEL__
 
@@ -133,4 +133,4 @@ typedef struct canfilt_t canfilt_t;
 } /* extern "C"*/
 #endif
 
-#endif /*_CANMSG_T_H*/
+#endif // _CANFESTIVAL_DRIVERS_CAN_LINCAN_CANMSG_H

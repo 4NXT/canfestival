@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef CANFESTIVAL_CANCFG_H_INCLUDED
-#define CANFESTIVAL_CANCFG_H_INCLUDED
+#ifndef _CANFESTIVAL_DRIVERS_CAN_MULTI_PEEAKWIN32_CANCFG_H
+#define _CANFESTIVAL_DRIVERS_CAN_MULTI_PEEAKWIN32_CANCFG_H
 
 
 #if defined(__CYGWIN__)

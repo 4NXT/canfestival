@@ -1,5 +1,5 @@
-#ifndef UNIX_H_
-#define UNIX_H_
+#ifndef _CANFESTIVAL_INCLUDE_UNIX_CANFESTIVAL_H
+#define _CANFESTIVAL_INCLUDE_UNIX_CANFESTIVAL_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -88,4 +88,4 @@ UNS8 canChangeBaudRate(CAN_PORT port, char* baud);
 };
 #endif
 
-#endif /*UNIX_H_*/
+#endif // _CANFESTIVAL_INCLUDE_UNIX_CANFESTIVAL_H

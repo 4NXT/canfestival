@@ -21,8 +21,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef _IAR_H_
-#define _IAR_H_
+#ifndef _CANFESTIVAL_INCLUDE_AT91_IAR_H
+#define _CANFESTIVAL_INCLUDE_AT91_IAR_H
 
 #ifdef  __IAR_SYSTEMS_ICC__	// IAR Compiler
 
@@ -43,4 +43,4 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #error Not an IAR Compiler!
 #endif				// IAR Compiler
 
-#endif // _IAR_H_
+#endif // _CANFESTIVAL_INCLUDE_AT91_IAR_H

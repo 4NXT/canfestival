@@ -21,8 +21,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 
-#ifndef __CANOPENDRIVER__
-#define __CANOPENDRIVER__
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_CANOPENDRIVER_H
+#define _CANFESTIVAL_INCLUDE_HCS12_CANOPENDRIVER_H
 
 
 

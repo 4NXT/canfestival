@@ -22,8 +22,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 
-#ifndef __CAN_CANFESTIVAL__
-#define __CAN_CANFESTIVAL__
+#ifndef _CANFESTIVAL_INCLUDE_AT91_CANFESTIVAL_H
+#define _CANFESTIVAL_INCLUDE_AT91_CANFESTIVAL_H
 
 #include "applicfg.h"
 #include "data.h"

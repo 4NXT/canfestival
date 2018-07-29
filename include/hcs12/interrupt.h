@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __INTERRUPT__
-#define __INTERRUPT__
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_INTERRUPT_H
+#define _CANFESTIVAL_INCLUDE_HCS12_INTERRUPT_H
 
  
 /**
@@ -141,4 +141,4 @@ Message error on MSCAN 4
 void __attribute__((interrupt)) can4HdlErr (void);
 
 
-#endif /* __INTERRUPT__  */
+#endif // _CANFESTIVAL_INCLUDE_HCS12_INTERRUPT_H

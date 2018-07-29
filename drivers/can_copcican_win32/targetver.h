@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _CANFESTIVAL_DRIVERS_CAN_COPCICAN_WIN32_TARGETVER_H
+#define _CANFESTIVAL_DRIVERS_CAN_COPCICAN_WIN32_TARGETVER_H
 
 // Including SDKDDKVer.h defines the highest available Windows platform.
 
@@ -6,3 +7,5 @@
 // set the _WIN32_WINNT macro to the platform you wish to support before including SDKDDKVer.h.
 
 #include <SDKDDKVer.h>
+
+#endif

@@ -42,8 +42,8 @@ Software Foundation, 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.  *
 
 /* Revised francis.dupin@inrets.fr 2003-07 */
 
-#ifndef _M68HC11_PORTS_H
-#define _M68HC11_PORTS_H
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_PORTS_H
+#define _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_PORTS_H
 
 
 
@@ -241,5 +241,5 @@ set_output_compare_5 (unsigned short value)
 
 
 
-#endif /* _M68HC11_PORTS_H */
+#endif // _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_PORTS_H
 

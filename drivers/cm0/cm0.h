@@ -1,6 +1,6 @@
   
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef _CANFESTIVAL_DRIVERS_CM0_CM0_H
+#define _CANFESTIVAL_DRIVERS_CM0_CM0_H
 
 #include "stm32f0xx.h"
 

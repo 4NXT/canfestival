@@ -1,5 +1,5 @@
-#ifndef CALLBACK_H_
-#define CALLBACK_H_
+#ifndef _CANFESTIVAL_EXAMPLES_DS401_SLAVE_GUI_CALLBACK_H
+#define _CANFESTIVAL_EXAMPLES_DS401_SLAVE_GUI_CALLBACK_H
 
 extern "C"
 {
@@ -19,4 +19,4 @@ void Call_post_sync (CO_Data * d);
 void Call_post_TPDO (CO_Data * d);
 void Call_storeODSubIndex (CO_Data * d, UNS16 wIndex, UNS8 bSubindex);
 
-#endif /*CALLBACK_H_ */
+#endif // _CANFESTIVAL_EXAMPLES_DS401_SLAVE_GUI_CALLBACK_H

@@ -1,3 +1,6 @@
+#ifndef _CANFESTIVAL_INCLUDE_DCF_H
+#define _CANFESTIVAL_INCLUDE_DCF_H
+
 /*
 This file is part of CanFestival, a library implementing CanOpen Stack. 
 
@@ -29,3 +32,5 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 UNS8 init_consise_dcf(CO_Data* d, UNS8 nodeId);
 UNS8 check_and_start_node(CO_Data* d, UNS8 nodeId);
+
+#endif

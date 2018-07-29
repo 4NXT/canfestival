@@ -21,8 +21,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef _IO_MACRO
-#define _IO_MACRO
+#ifndef _CANFESTIVAL_EXAMPLES_AT91_MASTER_IO_MACRO_H
+#define _CANFESTIVAL_EXAMPLES_AT91_MASTER_IO_MACRO_H
 
 // Macros for set and clear bits in I/O registers
 #define setbit(address,bit) (address |= (1<<bit))

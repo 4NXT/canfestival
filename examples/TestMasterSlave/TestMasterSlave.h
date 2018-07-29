@@ -1,3 +1,6 @@
+#ifndef _CANFESTIVAL_EXAMPLES_TESTMASTERSLAVE_TESTMASTERSLAVE_H
+#define _CANFESTIVAL_EXAMPLES_TESTMASTERSLAVE_TESTMASTERSLAVE_H
+
 /*
 This file is part of CanFestival, a library implementing CanOpen Stack. 
 
@@ -57,3 +60,5 @@ static void TransmitMessage(CO_Data* d, UNS32 id)\
 	canDispatch(d, &m);\
 }
 */
+
+#endif

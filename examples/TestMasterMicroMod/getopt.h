@@ -26,10 +26,10 @@
 
   
 
-#ifndef _GETOPT_H
+#ifndef _CANFESTIVAL_EXAMPLES_TESTMASTERMICROMOD_GETOPT_H
 
 #ifndef __need_getopt
-# define _GETOPT_H 1
+# define _CANFESTIVAL_EXAMPLES_TESTMASTERMICROMOD_GETOPT_H 1
 #endif
 
 /* If __GNU_LIBRARY__ is not already defined, either we are being used
@@ -187,5 +187,5 @@ extern int _getopt_internal ();
 /* Make sure we later can get all the definitions and declarations.  */
 #undef __need_getopt
 
-#endif /* getopt.h */
+#endif // _CANFESTIVAL_EXAMPLES_TESTMASTERMICROMOD_GETOPT_H
 

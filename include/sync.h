@@ -26,8 +26,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  @ingroup comobj
  */
 					 
-#ifndef CANFESTIVAL_SYNC_H_INCLUDED
-#define CANFESTIVAL_SYNC_H_INCLUDED
+#ifndef _CANFESTIVAL_INCLUDE_SYNC_H
+#define _CANFESTIVAL_INCLUDE_SYNC_H
 
 void startSYNC(CO_Data* d);
 

@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef CANFESTIVAL_objdictdef_H_INCLUDED
-#define CANFESTIVAL_objdictdef_H_INCLUDED
+#ifndef _CANFESTIVAL_INCLUDE_OBJDICTDEF_H
+#define _CANFESTIVAL_INCLUDE_OBJDICTDEF_H
 
 /************************* CONSTANTES **********************************/
 /** this are static defined datatypes taken fCODE the canopen standard. They
@@ -124,4 +124,4 @@ typedef const indextable * (*scanIndexOD_t)(CO_Data* d, UNS16 wIndex, UNS32 * er
 #define GET_NODE_ID(m)         (UNS16_LE(m.cob_id) & 0x7f)
 #define GET_FUNCTION_CODE(m)   (UNS16_LE(m.cob_id) >> 7)
 
-#endif /* CANFESTIVAL_objdictdef_H_INCLUDED */
+#endif // _CANFESTIVAL_INCLUDE_OBJDICTDEF_H

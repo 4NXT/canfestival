@@ -25,8 +25,8 @@ MCU ports and Bits
 Makros for access on hardware
 ******************************************************************************/
 
-#ifndef _HARDWARE_INCLUDED
-#define _HARDWARE_INCLUDED
+#ifndef _CANFESTIVAL_EXAMPLES_AVR_SLAVE_HARDWARE_H
+#define _CANFESTIVAL_EXAMPLES_AVR_SLAVE_HARDWARE_H
 
 /******************************************************************************
 Makros for bit access on the ports and registers
@@ -47,6 +47,6 @@ Makros for bit access on the ports and registers
 // Write the outputs
 #define set_outputs(val)	PORTB = ~(val)
 
-#endif	// _HARDWARE_INCLUDED
+#endif // _CANFESTIVAL_EXAMPLES_AVR_SLAVE_HARDWARE_H
 
 

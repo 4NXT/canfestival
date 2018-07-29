@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __APPLICFG_NONE__
-#define __APPLICFG_NONE__
+#ifndef _CANFESTIVAL_INCLUDE_NONE_APPLICFG_H
+#define _CANFESTIVAL_INCLUDE_NONE_APPLICFG_H
 
 #include <string.h>
 #include <sys/types.h>

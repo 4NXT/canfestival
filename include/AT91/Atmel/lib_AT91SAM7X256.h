@@ -38,8 +38,8 @@
 //* CVS Reference       : /lib_pdc.h/1.2/Tue Jul  2 13:29:40 2002//
 //* ----------------------------------------------------------------------------
 
-#ifndef lib_AT91SAM7X256_H
-#define lib_AT91SAM7X256_H
+#ifndef _CANFESTIVAL_INCLUDE_AT91_ATMEL_LIB_AT91SAM7X256_H
+#define _CANFESTIVAL_INCLUDE_AT91_ATMEL_LIB_AT91SAM7X256_H
 
 /* *****************************************************************************
                 SOFTWARE API FOR AIC
@@ -1488,7 +1488,7 @@ __inline unsigned int AT91F_RTTReadValue(
    ***************************************************************************** */
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_PITInit
-//* \brief System timer init : period in µsecond, system clock freq in MHz
+//* \brief System timer init : period in ï¿½second, system clock freq in MHz
 //*----------------------------------------------------------------------------
 __inline void AT91F_PITInit(
         AT91PS_PITC pPITC,
@@ -4208,4 +4208,4 @@ __inline void AT91F_PWMC_CfgPMC (void)
 		((unsigned int) 1 << AT91C_ID_PWMC));
 }
 
-#endif // lib_AT91SAM7X256_H
+#endif // _CANFESTIVAL_INCLUDE_AT91_ATMEL_LIB_AT91SAM7X256_H

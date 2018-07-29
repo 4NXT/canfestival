@@ -21,8 +21,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __CAN_AVR__
-#define __CAN_AVR__
+#ifndef _CANFESTIVAL_INCLUDE_AVR_CAN_AVR_H
+#define _CANFESTIVAL_INCLUDE_AVR_CAN_AVR_H
 
 // AVR implementation of the CANopen driver includes
 // Hardware related macros and ATMEL lib can_drv
