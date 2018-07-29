@@ -1,0 +1,51 @@
+/* 
+This file is part of CanFestival, a library implementing CanOpen Stack.
+
+Copyright (C): Edouard TISSERANT and Francis DUPIN
+See COPYING file for copyrights details.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+#ifndef _CANFESTIVAL_INCLUDE_CONFIG_H
+#define _CANFESTIVAL_INCLUDE_CONFIG_H
+
+#cmakedefine01 CANOPEN_BIG_ENDIAN
+
+#cmakedefine MAX_CAN_BUS_ID @MAX_CAN_BUS_ID@
+#cmakedefine SDO_MAX_LENGTH_TRANSFER @SDO_MAX_LENGTH_TRANSFER@
+#cmakedefine SDO_BLOCK_SIZE @SDO_BLOCK_SIZE@
+#cmakedefine SDO_MAX_SIMULTANEOUS_TRANSFERS @SDO_MAX_SIMULTANEOUS_TRANSFERS@
+#cmakedefine NMT_MAX_NODE_ID @NMT_MAX_NODE_ID@
+#cmakedefine SDO_TIMEOUT_MS @SDO_TIMEOUT_MS@
+#cmakedefine MAX_NB_TIMER @MAX_NB_TIMER@
+#cmakedefine US_TO_TIMEVAL_FACTOR @US_TO_TIMEVAL_FACTOR@
+#cmakedefine TIMEVAL @TIMEVAL@
+#cmakedefine TIMEVAL_MAX @TIMEVAL_MAX@
+#cmakedefine RTCAN_SOCKET @RTCAN_SOCKET@
+#cmakedefine EMCY_MAX_ERRORS @EMCY_MAX_ERRORS@
+#cmakedefine LSS_TIMEOUT_MS @LSS_TIMEOUT_MS@
+#cmakedefine LSS_FS_TIMEOUT_MS @LSS_FS_TIMEOUT_MS@
+
+#cmakedefine SDO_DYNAMIC_BUFFER_ALLOCATION
+#cmakedefine SDO_DYNAMIC_BUFFER_ALLOCATION_SIZE @SDO_DYNAMIC_BUFFER_ALLOCATION_SIZE@
+
+#define REPEAT_SDO_MAX_SIMULTANEOUS_TRANSFERS_TIMES(repeat) @SDO_MAX_SIMULTANEOUS_TRANSFERS_REPEAT_STRING@
+
+#define REPEAT_NMT_MAX_NODE_ID_TIMES(repeat) @NMT_MAX_NODE_ID_REPEAT_STRING@
+
+#define REPEAT_EMCY_MAX_ERRORS_TIMES(repeat) @EMCY_MAX_ERRORS_REPEAT_STRING@
+
+#endif /* _CANFESTIVAL_INCLUDE_CONFIG_H */
