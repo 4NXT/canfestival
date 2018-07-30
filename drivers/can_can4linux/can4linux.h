@@ -65,8 +65,8 @@
 */
 
 
-#ifndef __CAN_H
-#define __CAN_H
+#ifndef _CANFESTIVAL_DRIVERS_CAN_CAN4LINUX_CAN4LINUX_H
+#define _CANFESTIVAL_DRIVERS_CAN_CAN4LINUX_CAN4LINUX_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -221,4 +221,4 @@ typedef struct ConfigureRTR_par {
 }
 #endif
 
-#endif 	/* __CAN_H */
+#endif // _CANFESTIVAL_DRIVERS_CAN_CAN4LINUX_CAN4LINUX_H

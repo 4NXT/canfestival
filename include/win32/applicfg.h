@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __APPLICFG_WIN32__
-#define __APPLICFG_WIN32__
+#ifndef _CANFESTIVAL_INCLUDE_WIN32_APPLICFG_H
+#define _CANFESTIVAL_INCLUDE_WIN32_APPLICFG_H
 
 #include <windows.h>
 #include <string.h>
@@ -159,4 +159,4 @@ typedef void* CAN_HANDLE;
 
 typedef void* CAN_PORT;
 
-#endif // __APPLICFG_WIN32__
+#endif // _CANFESTIVAL_INCLUDE_WIN32_APPLICFG_H

@@ -7,8 +7,8 @@
  * Version lincan-0.3  17 Jun 2004
  */
 
-#ifndef _CAN_DRVAPI_T_H
-#define _CAN_DRVAPI_T_H
+#ifndef _CANFESTIVAL_DRIVERS_CAN_LINCAN_LINCAN_H
+#define _CANFESTIVAL_DRIVERS_CAN_LINCAN_LINCAN_H
 
 #ifdef __KERNEL__
 
@@ -83,4 +83,4 @@ struct can_baudparams_t {
 } /* extern "C"*/
 #endif
 
-#endif /*_CAN_DRVAPI_T_H*/
+#endif // _CANFESTIVAL_DRIVERS_CAN_LINCAN_LINCAN_H

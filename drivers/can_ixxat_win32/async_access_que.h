@@ -22,8 +22,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 // thread safe que
-#ifndef __async_access_que_h__
-#define __async_access_que_h__
+#ifndef _CANFESTIVAL_DRIVERS_CAN_IXXAT_WIN32_ASYNC_ACCESS_QUE_H
+#define _CANFESTIVAL_DRIVERS_CAN_IXXAT_WIN32_ASYNC_ACCESS_QUE_H
 
 #include <deque>
 #include "AutoReleaseCS.h"
@@ -109,4 +109,4 @@ class async_access_que
 	  HANDLE m_stopped;
 	  HANDLE m_commands[2];
    };
-#endif //__async_access_que_h__
+#endif // _CANFESTIVAL_DRIVERS_CAN_IXXAT_WIN32_ASYNC_ACCESS_QUE_H

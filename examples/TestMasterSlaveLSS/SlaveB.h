@@ -1,3 +1,6 @@
+#ifndef _CANFESTIVAL_EXAMPLES_TESTMASTERSLAVELSS_SLAVEB_H
+#define _CANFESTIVAL_EXAMPLES_TESTMASTERSLAVELSS_SLAVEB_H
+
 #include "TestSlaveB.h"
 
 void TestSlaveB_heartbeatError(CO_Data* d, UNS8);
@@ -15,3 +18,5 @@ UNS32 TestSlaveB_storeODSubIndex(CO_Data* d, UNS16 wIndex, UNS8 bSubindex);
 void TestSlaveB_post_emcy(CO_Data* d, UNS8 nodeID, UNS16 errCode, UNS8 errReg, const UNS8 errSpec[5]);
 void TestSlaveB_NMT_Slave_Communications_Reset_Callback(CO_Data* d);
 void TestSlaveB_StoreConfiguration(CO_Data* d, UNS8 *error, UNS8 *spec_error);
+
+#endif

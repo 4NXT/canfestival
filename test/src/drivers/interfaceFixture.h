@@ -1,3 +1,6 @@
+#ifndef _CANFESTIVAL_TEST_SRC_DRIVERS_INTERFACEFIXTURE_H
+#define _CANFESTIVAL_TEST_SRC_DRIVERS_INTERFACEFIXTURE_H
+
 #pragma once
 #include "gtest/gtest.h"
 #include "canfestival.h"
@@ -31,3 +34,4 @@ protected:
 	CANCLOSE_DRIVER_PROC canClose;
 	CANCHANGEBAUDRATE_DRIVER_PROC canChangeBaudRate;
 };
+#endif

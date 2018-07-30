@@ -1,3 +1,6 @@
+#ifndef _CANFESTIVAL_EXAMPLES_LINUX_DCF_GENDCF_H
+#define _CANFESTIVAL_EXAMPLES_LINUX_DCF_GENDCF_H
+
 
 #define DCF_MAX_SIZE 50
 #define DEVICE_DICT_NAME "dcfdata.txt"
@@ -5,3 +8,5 @@
 
 void dcf_data_display(uint8_t dcfdata[][DCF_MAX_SIZE]);
 int dcf_read_in_file(char *fileName, uint8_t dcfdata[][DCF_MAX_SIZE]);
+
+#endif

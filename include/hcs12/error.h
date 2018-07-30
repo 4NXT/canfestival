@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __ERROR__
-#define __ERROR__
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_ERROR_H
+#define _CANFESTIVAL_INCLUDE_HCS12_ERROR_H
  
 
 #define ERR_CAN_ADD_ID_TO_FILTER        "1      Not in init mode"

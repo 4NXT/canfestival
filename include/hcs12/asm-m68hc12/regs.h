@@ -47,8 +47,8 @@ along with this program; see the file COPYING.  If not, write to
 the Free Software Foundation, 59 Temple Place - Suite 330,
 Boston, MA 02111-1307, USA.  */
 
-#ifndef _M68HC11_REGS_H
-#define _M68HC11_REGS_H
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_REGS_H
+#define _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_REGS_H
 
 /* Include this file if you want to have access to the soft registers
    used by GCC.  The soft registers are memory location.  They have

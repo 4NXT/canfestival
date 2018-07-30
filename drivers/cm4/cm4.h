@@ -1,6 +1,6 @@
   
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef _CANFESTIVAL_DRIVERS_CM4_CM4_H
+#define _CANFESTIVAL_DRIVERS_CM4_CM4_H
 
 #include "stm32f37x.h"
 

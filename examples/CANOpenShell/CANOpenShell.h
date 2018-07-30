@@ -1,3 +1,6 @@
+#ifndef _CANFESTIVAL_EXAMPLES_CANOPENSHELL_CANOPENSHELL_H
+#define _CANFESTIVAL_EXAMPLES_CANOPENSHELL_CANOPENSHELL_H
+
 /*
 This file is part of CanFestival, a library implementing CanOpen Stack.
 
@@ -39,3 +42,5 @@ void CheckWriteSDO(CO_Data*, UNS8);
 void ReadDeviceEntry(char*);
 void WriteDeviceEntry(char*);
 void SleepFunction(int);
+
+#endif

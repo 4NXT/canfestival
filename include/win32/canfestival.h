@@ -20,8 +20,8 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
-#ifndef CANFESTIVAL_H_
-#define CANFESTIVAL_H_
+#ifndef _CANFESTIVAL_INCLUDE_WIN32_CANFESTIVAL_H
+#define _CANFESTIVAL_INCLUDE_WIN32_CANFESTIVAL_H
 
 #include "timerscfg.h"
 #include "can_driver.h"
@@ -38,4 +38,4 @@ CAN_PORT canOpen(s_BOARD *board, CO_Data * d);
 int canClose(CO_Data * d);
 UNS8 canChangeBaudRate(CAN_PORT port, char* baud);
 
-#endif /*CANFESTIVAL_H_*/
+#endif // _CANFESTIVAL_INCLUDE_WIN32_CANFESTIVAL_H

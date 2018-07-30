@@ -21,8 +21,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __CAN_AT91__
-#define __CAN_AT91__
+#ifndef _CANFESTIVAL_INCLUDE_AT91_CAN_AT91_H
+#define _CANFESTIVAL_INCLUDE_AT91_CAN_AT91_H
 
 #include "config.h"
 

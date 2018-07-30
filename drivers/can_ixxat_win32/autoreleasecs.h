@@ -22,8 +22,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 // Critical Section Autorelease
-#ifndef __autoreleasecs_h__
-#define __autoreleasecs_h__
+#ifndef _CANFESTIVAL_DRIVERS_CAN_IXXAT_WIN32_AUTORELEASECS_H
+#define _CANFESTIVAL_DRIVERS_CAN_IXXAT_WIN32_AUTORELEASECS_H
 
 class AutoReleaseCS
    {
@@ -38,4 +38,5 @@ class AutoReleaseCS
          }
       CRITICAL_SECTION& m_cs;
    };
- #endif // __autoreleasecs_h__
+
+#endif // _CANFESTIVAL_DRIVERS_CAN_IXXAT_WIN32_AUTORELEASECS_H

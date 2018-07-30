@@ -20,8 +20,8 @@
   */ 
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32F10x_CONF_H
-#define __STM32F10x_CONF_H
+#ifndef _CANFESTIVAL_DRIVERS_CM3_STM32F10X_CONF_H
+#define _CANFESTIVAL_DRIVERS_CM3_STM32F10X_CONF_H
 
 /* Includes ------------------------------------------------------------------*/
 /* Uncomment/Comment the line below to enable/disable peripheral header file inclusion */
@@ -71,6 +71,6 @@
   #define assert_param(expr) ((void)0)
 #endif /* USE_FULL_ASSERT */
 
-#endif /* __STM32F10x_CONF_H */
+#endif // _CANFESTIVAL_DRIVERS_CM3_STM32F10X_CONF_H
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

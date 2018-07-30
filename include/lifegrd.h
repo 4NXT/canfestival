@@ -49,8 +49,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 **
 */
 				 
-#ifndef __lifegrd_h__
-#define __lifegrd_h__
+#ifndef _CANFESTIVAL_INCLUDE_LIFEGRD_H
+#define _CANFESTIVAL_INCLUDE_LIFEGRD_H
 
 
 #include <applicfg.h>
@@ -144,4 +144,4 @@ void heartbeatStop(CO_Data* d);
 void proceedNODE_GUARD (CO_Data* d, Message* m);
 
 
-#endif /*__lifegrd_h__ */
+#endif // _CANFESTIVAL_INCLUDE_LIFEGRD_H

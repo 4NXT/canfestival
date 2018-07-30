@@ -20,8 +20,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __can_h__
-#define __can_h__
+#ifndef _CANFESTIVAL_INCLUDE_CAN_H
+#define _CANFESTIVAL_INCLUDE_CAN_H
 
 #include "applicfg.h"
 
@@ -40,4 +40,4 @@ typedef struct {
 
 typedef UNS8 (*canSend_t)(Message *);
 
-#endif /* __can_h__ */
+#endif // _CANFESTIVAL_INCLUDE_CAN_H

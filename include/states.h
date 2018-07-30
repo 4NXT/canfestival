@@ -24,8 +24,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  @ingroup userapi
  */
  
-#ifndef __states_h__
-#define __states_h__
+#ifndef _CANFESTIVAL_INCLUDE_STATES_H
+#define _CANFESTIVAL_INCLUDE_STATES_H
 
 #include <applicfg.h>
 

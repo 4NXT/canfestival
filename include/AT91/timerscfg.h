@@ -21,8 +21,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __TIMERSCFG_H__
-#define __TIMERSCFG_H__
+#ifndef _CANFESTIVAL_INCLUDE_AT91_TIMERSCFG_H
+#define _CANFESTIVAL_INCLUDE_AT91_TIMERSCFG_H
 
 // Whatever your microcontroller, the timer wont work if
 // TIMEVAL is not at least on 32 bits

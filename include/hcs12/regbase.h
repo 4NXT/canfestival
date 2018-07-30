@@ -21,18 +21,13 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 /*
-Définition du maping,
-qui dépend du contenu du registre INITRG
+Definition du maping,
+qui depend du contenu du registre INITRG
 */
 
 
-#ifndef __REGBASE__
-#define __REGBASE__
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_REGBASE_H
+#define _CANFESTIVAL_INCLUDE_HCS12_REGBASE_H
 
 
-
-
-
-
-
-#endif __REGBASE__
+#endif

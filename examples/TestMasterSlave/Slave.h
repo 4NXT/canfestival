@@ -1,3 +1,6 @@
+#ifndef _CANFESTIVAL_EXAMPLES_TESTMASTERSLAVE_SLAVE_H
+#define _CANFESTIVAL_EXAMPLES_TESTMASTERSLAVE_SLAVE_H
+
 #include "TestSlave.h"
 
 void TestSlave_heartbeatError(CO_Data* d, UNS8);
@@ -14,3 +17,5 @@ void TestSlave_post_TPDO(CO_Data* d);
 UNS32 TestSlave_storeODSubIndex(CO_Data* d, UNS16 wIndex, UNS8 bSubindex);
 
 void TestSlave_post_emcy(CO_Data* d, UNS8 nodeID, UNS16 errCode, UNS8 errReg, const UNS8 errSpec[5]);
+
+#endif

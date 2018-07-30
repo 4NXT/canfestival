@@ -1,6 +1,6 @@
   
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef _CANFESTIVAL_DRIVERS_CM3_CM3_H
+#define _CANFESTIVAL_DRIVERS_CM3_CM3_H
 
 #include "stm32f10x.h"
 

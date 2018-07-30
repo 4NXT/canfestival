@@ -1,5 +1,5 @@
-#ifndef CANFESTIVAL_H_
-#define CANFESTIVAL_H_
+#ifndef _CANFESTIVAL_INCLUDE_NONE_CANFESTIVAL_H
+#define _CANFESTIVAL_INCLUDE_NONE_CANFESTIVAL_H
 
 #include "timerscfg.h"
 #include "can_driver.h"

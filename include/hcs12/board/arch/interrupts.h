@@ -46,8 +46,8 @@ along with this program; see the file COPYING.  If not, write to
 the Free Software Foundation, 59 Temple Place - Suite 330,
 Boston, MA 02111-1307, USA.  */
 
-#ifndef _M68HC11_ARCH_32K_INTERRUPTS_H
-#define _M68HC11_ARCH_32K_INTERRUPTS_H
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_BOARD_ARCH_INTERRUPTS_H
+#define _CANFESTIVAL_INCLUDE_HCS12_BOARD_ARCH_INTERRUPTS_H
 
 /* For ROM-boards, interrupts are in ROM and are not installed
    at run time.  Implementation is empty.  */

@@ -17,8 +17,8 @@
 //
 //  ----------------------------------------------------------------------------
 
-#ifndef AT91SAM7X_EK_H
-#define AT91SAM7X_EK_H
+#ifndef _CANFESTIVAL_EXAMPLES_AT91_MASTER_AT91SAM7X_EK_H
+#define _CANFESTIVAL_EXAMPLES_AT91_MASTER_AT91SAM7X_EK_H
 
 /*-----------------*/
 /* LEDs Definition */
@@ -58,4 +58,4 @@
 #define AT91B_MAIN_OSC        18432000               // Main Oscillator MAINCK
 #define AT91B_MCK             ((18432000*73/14)/2)   // Output PLL Clock
 
-#endif /* AT91SAM7X-EK_H */
+#endif // _CANFESTIVAL_EXAMPLES_AT91_MASTER_AT91SAM7X_EK_H

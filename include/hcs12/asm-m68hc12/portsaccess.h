@@ -24,8 +24,8 @@ Variables to access to the io_ports
 */
 
 
-#ifndef __PORTS_ACCESS__
-#define __PORTS_ACCESS__
+#ifndef _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_PORTSACCESS_H
+#define _CANFESTIVAL_INCLUDE_HCS12_ASM_M68HC12_PORTSACCESS_H
 
 /*
 By default the address is 0X0000 on HCS12.

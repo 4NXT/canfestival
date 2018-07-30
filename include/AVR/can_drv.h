@@ -21,8 +21,8 @@
 //******************************************************************************
 // Same stuff removed by Peter Christen
 
-#ifndef _CAN_DRV_H_
-#define _CAN_DRV_H_
+#ifndef _CANFESTIVAL_INCLUDE_AVR_CAN_DRV_H
+#define _CANFESTIVAL_INCLUDE_AVR_CAN_DRV_H
 
 typedef unsigned char       U8 ;
 
@@ -185,7 +185,7 @@ typedef enum {
                                       CANIDM2   = CAN_SET_EXT_ID_20_13(mask); \
                                       CANIDM3   = CAN_SET_EXT_ID_12_5( mask); \
                                       CANIDM4   = CAN_SET_EXT_ID_4_0(  mask); }
-#endif // _CAN_DRV_H_
+#endif // _CANFESTIVAL_INCLUDE_AVR_CAN_DRV_H
 
 
 

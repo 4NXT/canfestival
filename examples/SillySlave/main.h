@@ -31,8 +31,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 
 
-#ifndef _MAIN_H
- #define _MAIN_H
+#ifndef _CANFESTIVAL_EXAMPLES_SILLYSLAVE_MAIN_H
+ #define _CANFESTIVAL_EXAMPLES_SILLYSLAVE_MAIN_H
 
 #if defined(WIN32) && !defined(__CYGWIN__)
 #include <windows.h>
@@ -57,5 +57,5 @@ void pause(void);
 #define BAUDRATE 125
 #define BUS 0
 
-#endif /* _MAIN_H */
+#endif // _CANFESTIVAL_EXAMPLES_SILLYSLAVE_MAIN_H
 

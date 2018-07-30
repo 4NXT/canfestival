@@ -21,8 +21,8 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef _CONFIG_H_
-#define _CONFIG_H_
+#ifndef _CANFESTIVAL_INCLUDE_AT91_CONFIG_H
+#define _CANFESTIVAL_INCLUDE_AT91_CONFIG_H
 
 //#include "compiler.h"
 
@@ -72,4 +72,4 @@ repeat repeat repeat repeat repeat repeat repeat repeat repeat repeat repeat rep
 repeat repeat repeat repeat repeat repeat repeat repeat
 
 
-#endif /* _CONFIG_H_ */
+#endif // _CANFESTIVAL_INCLUDE_AT91_CONFIG_H
