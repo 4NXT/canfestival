@@ -57,10 +57,10 @@ set(SDO_DYNAMIC_BUFFER_ALLOCATION_SIZE "131072" CACHE STRING "" FORCE)
 # Make sure to set CMAKE_BUILD_TYPE when none has been specified by the user.
 ensure_build_type(${CANFESTIVAL_DEFAULT_BUILD_TYPE})
 
-# --- Targets ---
+# --- Interface (header-only) Targets ---
 
 # Target: canfestival::platform
-#
+# Platform-specific headers.
 foreach(_platform ${CANFESTIVAL_SUPPORTED_PLATFORMS})
   set(_target platform_${_platform})
   add_library(${_target} INTERFACE)
@@ -70,7 +70,7 @@ endforeach()
 add_library(canfestival::platform ALIAS platform_${CANFESTIVAL_TARGET_PLATFORM})
 
 # Target: canfestival::timers
-#
+# The selected timer driver headers.
 foreach(_timers ${CANFESTIVAL_SUPPORTED_TIMERS})
   set(_target timers_${_timers})
   add_library(${_target} INTERFACE)
@@ -101,27 +101,73 @@ target_include_directories(config INTERFACE ${gen_include_dir})
 target_sources(config INTERFACE ${config_h})
 add_library(canfestival::config ALIAS config)
 
-# Target: canfestival::canopen
-#
-set(_canopen_sources
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/timer.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/states.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/pdo.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/sdo.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/nmtMaster.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/emcy.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/objacces.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/dcf.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/lifegrd.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/lss.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/sync.c
-  # ${CMAKE_CURRENT_SOURCE_DIR}/src/symbols.c # TODO: needed only with configure option USE_KERNEL_TIMER
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/nmtSlave.c)
+# Target: canfestival::can_headers
+# Header-only target that contains all the canopen
+# header files.
+set(_can_headers_dir ${CMAKE_CURRENT_SOURCE_DIR}/include/)
+set(_can_headers
+  ${_can_headers_dir}/dcf.h
+  ${_can_headers_dir}/def.h
+  ${_can_headers_dir}/emcy.h
+  ${_can_headers_dir}/lifegrd.h
+  ${_can_headers_dir}/lss.h
+  ${_can_headers_dir}/objdictdef.h
+  ${_can_headers_dir}/sdo.h
+  ${_can_headers_dir}/states.h
+  ${_can_headers_dir}/sync.h
+  ${_can_headers_dir}/sysdep.h
+  ${_can_headers_dir}/can_driver.h
+  ${_can_headers_dir}/data.h
+  ${_can_headers_dir}/nmtMaster.h
+  ${_can_headers_dir}/nmtSlave.h
+  ${_can_headers_dir}/objacces.h
+  ${_can_headers_dir}/pdo.h
+  ${_can_headers_dir}/timer.h
+  ${_can_headers_dir}/timers_driver.h
+  ${_can_headers_dir}/can.h)
 
-add_library(canopen ${_canopen_sources})
-target_include_directories(canopen PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include/)
-target_link_libraries(canopen
-                      PUBLIC canfestival::config
+add_library(can_headers INTERFACE)
+target_sources(can_headers INTERFACE ${_can_headers})
+target_include_directories(can_headers INTERFACE ${_can_headers_dir})
+target_link_libraries(can_headers
+                      INTERFACE canfestival::config
+                                canfestival::platform
+                                canfestival::timers)
+add_library(canfestival::headers ALIAS can_headers)
+
+# --- Drivers ---
+
+# Target: canfestival::drivers::virtual
+add_library(driver_virtual
+            ${CMAKE_CURRENT_SOURCE_DIR}/drivers/can_virtual/can_virtual.c)
+target_link_libraries(driver_virtual PUBLIC canfestival::headers)
+add_library(canfestival::drivers::virtual ALIAS driver_virtual)
+
+# --- Canfestival library ---
+
+# Target: canfestival::canfestival
+#
+set(_can_sources_dir ${CMAKE_CURRENT_SOURCE_DIR}/src/)
+set(_can_sources
+  ${_can_sources_dir}/timer.c
+  ${_can_sources_dir}/states.c
+  ${_can_sources_dir}/pdo.c
+  ${_can_sources_dir}/sdo.c
+  ${_can_sources_dir}/nmtMaster.c
+  ${_can_sources_dir}/emcy.c
+  ${_can_sources_dir}/objacces.c
+  ${_can_sources_dir}/dcf.c
+  ${_can_sources_dir}/lifegrd.c
+  ${_can_sources_dir}/lss.c
+  ${_can_sources_dir}/sync.c
+  # ${_can_sources_dir}/symbols.c # TODO: needed only with configure option USE_KERNEL_TIMER
+  ${_can_sources_dir}/nmtSlave.c)
+
+add_library(canfestival ${_can_sources})
+target_link_libraries(canfestival
+                      PUBLIC canfestival::drivers::virtual # TODO: driver selection
+                             canfestival::headers
+                             canfestival::config
                              canfestival::platform
                              canfestival::timers)
-add_library(canfestival::canopen ALIAS canopen)
+add_library(canfestival::canfestival ALIAS canfestival)
