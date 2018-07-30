@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(canfestival VERSION 3.0.0 LANGUAGES C CXX)
 
 # --- Inclusions ---
-
+include(CMakeDependentOption)
+include(TestBigEndian)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/find)
 include(cmake/repeat_string.cmake)
 include(cmake/ensure_build_type.cmake)
@@ -29,28 +30,27 @@ set(CANFESTIVAL_TIMERS "unix" CACHE STRING "") # TODO: detect default timers
 set_property(CACHE CANFESTIVAL_TIMERS PROPERTY STRINGS ${CANFESTIVAL_SUPPORTED_TIMERS})
 
 # --- Canfestival configuration ---
-
-option(CANOPEN_BIG_ENDIAN "" OFF)
-option(CO_ENABLE_LSS "" OFF)
-option(CO_ENABLE_LSS_FS "" OFF)
-
-set(MAX_CAN_BUS_ID "1" CACHE STRING "" FORCE)
-set(SDO_MAX_LENGTH_TRANSFER "32" CACHE STRING "" FORCE)
-set(SDO_BLOCK_SIZE "16" CACHE STRING "" FORCE)
-set(SDO_MAX_SIMULTANEOUS_TRANSFERS "1" CACHE STRING "" FORCE)
-set(NMT_MAX_NODE_ID "128" CACHE STRING "" FORCE)
-set(SDO_TIMEOUT_MS "3000" CACHE STRING "" FORCE)
+TEST_BIG_ENDIAN(CANOPEN_BIG_ENDIAN)
+set(MAX_CAN_BUS_ID "1" CACHE STRING "Number of can bus to use" FORCE)
+set(SDO_MAX_LENGTH_TRANSFER "32" CACHE STRING "Max bytes to transmit by SDO. Use 4 if you only support expedited transfer. For a normal transfer, (usually for a string), use the maximum string size to transfer." FORCE)
+set(SDO_BLOCK_SIZE "16" CACHE STRING "For block transfer, number of segments transmitted at once. SDO_BLOCK_SIZE CAN frames must fit into the CAN Tx buffer" FORCE)
+set(SDO_MAX_SIMULTANEOUS_TRANSFERS "4" CACHE STRING "Number of SDO from differents nodes that the node can manage concurrently. For a slave node, usually use 1." FORCE)
+set(NMT_MAX_NODE_ID "128" CACHE STRING "Maximum number of nodes on the same network. Used for NMTable[bus][nodeId]." FORCE)
+set(SDO_TIMEOUT_MS "3000" CACHE STRING "Timeout in milliseconds for SDO. Leave empty for blocking indefinitely waiting for a response message." FORCE)
 set(MAX_NB_TIMER "32" CACHE STRING "" FORCE)
 set(US_TO_TIMEVAL_FACTOR "" CACHE STRING "" FORCE)
 set(TIMEVAL "" CACHE STRING "" FORCE)
 set(TIMEVAL_MAX "" CACHE STRING "" FORCE)
 set(RTCAN_SOCKET "" CACHE STRING "" FORCE)
-set(EMCY_MAX_ERRORS "8" CACHE STRING "" FORCE)
-set(LSS_TIMEOUT_MS "1000" CACHE STRING "" FORCE)
-set(LSS_FS_TIMEOUT_MS "100" CACHE STRING "" FORCE)
+set(EMCY_MAX_ERRORS "8" CACHE STRING "Max number of active errors managed in error_data structure." FORCE)
+set(LSS_TIMEOUT_MS "1000" CACHE STRING "Timeout in milliseconds for LSS." FORCE)
+set(LSS_FS_TIMEOUT_MS "100" CACHE STRING "Timeout in milliseconds for LSS FastScan." FORCE)
 
-option(SDO_DYNAMIC_BUFFER_ALLOCATION "" OFF)
-set(SDO_DYNAMIC_BUFFER_ALLOCATION_SIZE "131072" CACHE STRING "" FORCE)
+option(CO_ENABLE_LSS "Enable LSS support" OFF)
+CMAKE_DEPENDENT_OPTION(CO_ENABLE_LSS_FS "Enable LSS FastScan support" ON "CO_ENABLE_LSS" OFF)
+
+option(SDO_DYNAMIC_BUFFER_ALLOCATION "Use an heap-allocated dynamic buffer the stack buffer is full." OFF)
+set(SDO_DYNAMIC_BUFFER_ALLOCATION_SIZE "131072" CACHE STRING "Size of dynamic buffer to use when the static is full. A size of 0 disables SDO dynamic buffer allocation just like setting -DSDO_DYNAMIC_BUFFER_ALLOCATION=OFF" FORCE)
 
 # --- Build Type ---
 
@@ -167,7 +167,6 @@ add_library(canfestival ${_can_sources})
 target_link_libraries(canfestival
                       PUBLIC canfestival::drivers::virtual # TODO: driver selection
                              canfestival::headers
-                             canfestival::config
                              canfestival::platform
                              canfestival::timers)
 add_library(canfestival::canfestival ALIAS canfestival)
